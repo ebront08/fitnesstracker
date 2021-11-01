@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
-const routes = require("TristanEbronFullStackMay2021/fitnesstracker/routes");
+const routes = require('./routes');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/fitnesstracker_db',
+    process.env.MONGODB_URI || 'mongodb://localhost/fitnesstracker',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
